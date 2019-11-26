@@ -22,7 +22,7 @@
 				</div>
 				<div class="info">
 					<ul>
-						<li>29 años</li>
+						<li><h1 id="age"></h1></li>
 						<li>DNI AAG071582</li>
 						<li>NIE Y7410149T</li>
 						<li>Nacionalidad: Argentino</li>
@@ -158,7 +158,24 @@ Logre sacar adelante el proyecto del rediseño de una aplicación en lenguaje ob
 		</div>
 	</div>
 			
+	<script>
+	var Today = new Date();
+	var age = calculateAge("02/26/1990", Today); 
+	function calculateAge (birthDate, otherDate) {
+    		birthDate = new Date(birthDate);
+    		otherDate = new Date(otherDate);
 
+    		var years = (otherDate.getFullYear() - birthDate.getFullYear());
+
+    		if (otherDate.getMonth() < birthDate.getMonth() || 
+        	otherDate.getMonth() == birthDate.getMonth() && otherDate.getDate() < birthDate.getDate()) {
+        	years--;
+    		}
+
+    	return years;
+	}
+	document.getElementById("age").innerHTML = age+' años';
+	</script>
 
 	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
 </body>
