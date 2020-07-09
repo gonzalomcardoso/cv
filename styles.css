@@ -33,6 +33,10 @@ input {
   width: 15px
 }
 
+input[name="year"] {
+  width: 30px;
+}
+
 blockquote, q {
   quotes: none; }
 
@@ -160,18 +164,5 @@ span.texto {
   .conocimientos span.texto ul li {
     margin-top: 12px; }
 
-.edad {
-	width: 15px;
-}
-
-.day {
-	width: 15px;
-}
-.month {
-	width: 15px;
-}
-.year {
-	width: 15px;
-}
 
 /*# sourceMappingURL=styles.css.map */
